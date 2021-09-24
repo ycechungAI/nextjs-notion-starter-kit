@@ -1,8 +1,7 @@
-import * as React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
-
+import * as React from 'react'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
 import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
@@ -26,7 +25,19 @@ export const Footer: React.FC<{
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright 2021 {config.author}</div>
+      <div className={styles.copyright}>
+        Copyright 2021 {config.author}
+        <br />
+        Template by{' '}
+        <a
+          className='notion-link'
+          href='https://github.com/transitive-bullshit/nextjs-notion-starter-kit'
+          target='_blank'
+          rel='noopener noreferer'
+        >
+          Transitive
+        </a>
+      </div>
 
       {hasMounted ? (
         <div className={styles.settings}>
